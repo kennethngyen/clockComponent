@@ -1,15 +1,11 @@
 html{
-    background: rgb(250,197,197);
-    background: linear-gradient(0deg, rgba(250,197,197,1) 0%, rgba(171,255,181,1) 50%, rgba(15,226,255,1) 100%);
-    font-size:10px;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(250,197,197,1) 0%, rgba(15,226,255,0) 100%);    font-size:10px;
     text-align: center;
 }
 body{
     font-size: 2rem;
-    display:flex;
-    align-items: center;
     min-height: 100vh;
-    flex:1;
 }
 .hand{
     background:black;
@@ -22,15 +18,17 @@ body{
     transform: rotate(90deg);
     transition: 0.04s;
     transition-timing-function: ease-in-out;
-    border-radius: 20%;
+    border-radius: 20px;
 }
+
+
 
 .clock-face{
     position: relative;
     height:100%;
     transform:translateY(-3px);
     width: 100%;
-
+    margin: auto;
 }
 
 .clock{
@@ -44,14 +42,52 @@ body{
     box-shadow: 0 0 0px 4px,
         inset 0 0 0 3px,
         inset 0 0 10px black;
-    display: inline-block;
 }
 
 .container{
-    text-align: center;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .title{
     display: inline-block;
     font-family: 'Kodchasan', sans-serif;
+}
+
+.klock{
+    font-weight: bold;
+    background: linear-gradient(90deg, rgb(100, 4, 163) 0%, rgb(253, 29, 134) 50%, rgb(251, 255, 8) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.to-do-list{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+    
+}
+
+#form{
+    margin: 0 auto;
+    width: 100%; max-width: 1500px; padding:2rem 1rem;
+}
+#task-input{
+    flex: 1 1 0%;
+    background-color: white;
+    border:none;
+    border-radius: 12px;
+    padding: 1.3rem 2rem;
+    margin-right: 1.3rem;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+}
+
+input, button{
+    border: none;
+    background:none;
 }

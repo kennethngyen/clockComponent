@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="title">
-            <h1>KNNTH-KLCK</h1>
+            <h1 class="klock">klock</h1>
             <p>The current time is <span class="display-time"></span></p>
         </div>
         
@@ -23,6 +23,35 @@
                 <div class="hand hand-minute"></div>
                 <div class="hand hand-second"></div>
             </div>
+        </div>
+
+        <div class="to-do-list">
+            <h1>To-Do List</h1>
+            <form id="form">
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="type here"/>
+                <input
+                    type="submit"
+                    id="task-submit"
+                    value="ADD TASK"
+                    onclick="">
+            </form>
+            <div class="task-list">
+                <div class="task-content">
+                    <input type="text"
+                    class="text"
+                    value="my task"
+                    readonly />
+                </div>
+                <div class="task-actions">
+                    <button class="edit">Edit</button>
+                    <button class="delete">Done</button>
+
+                </div>
+            </div>
+
         </div>
     </div>
     <script src="clock.js"></script>

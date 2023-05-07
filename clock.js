@@ -25,7 +25,8 @@ const time = document.querySelector('.display-time')
 
 function setDisplayTime(){
     const now = new Date();
-    time.textContent=now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
+    const amORpm = (now.getHours()>12) ? 'pm' : 'am';
+    time.textContent=now.getHours()%12+":"+now.getMinutes()+":"+now.getSeconds()+amORpm;
 }
 
 setInterval(setDisplayTime,1000)
